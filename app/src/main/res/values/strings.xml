@@ -1,0 +1,117 @@
+<resources>
+
+    <string name="app_name">All Programming Languages</string>
+    <string name="imageView">imageView</string>
+    <string name="android">Android</string>
+    <string name="programming">Programming</string>
+    <string name="compiler">Compiler</string>
+    <string name="stackOverFlow">StackOverFlow</string>
+    <string name="saved">Saved</string>
+    <string name="tutorials">Tutorials</string>
+    <string name="notes">Notes</string>
+    <string name="version">AI : 3.0.1</string>
+    <string name="pageError">Page not Available</string>
+    <string name="internetError">Check your Internet Connection</string>
+    <string name="todo">TODO</string>
+
+    <string-array name="emojiList">
+
+        <item>😀</item>
+        <item>😄</item>
+        <item>😁</item>
+        <item>😅</item>
+        <item>🤣</item>
+        <item>😂</item>
+        <item>🙂</item>
+        <item>🙃</item>
+        <item>😉</item>
+        <item>😊</item>
+        <item>😇</item>
+        <item>🥰</item>
+        <item>😍</item>
+        <item>🤩</item>
+        <item>☺</item>
+        <item>😋</item>
+        <item>😛</item>
+        <item>😜</item>
+        <item>🤪</item>
+        <item>😝</item>
+        <item>🤗</item>
+        <item>🤭</item>
+        <item>🤫</item>
+        <item>🤔</item>
+        <item>🤐</item>
+        <item>😐</item>
+        <item>😑</item>
+        <item>😶</item>
+        <item>🙄</item>
+        <item>😌</item>
+        <item>😴</item>
+        <item>🥶</item>
+        <item>🤠</item>
+        <item>🥳</item>
+        <item>😎</item>
+        <item>🧐</item>
+        <item>😭</item>
+        <item>😎</item>
+        <item>😩</item>
+        <item>🥱</item>
+        <item>👻</item>
+        <item>🙈</item>
+        <item>💝</item>
+        <item>💘</item>
+        <item>💌</item>
+        <item>💖</item>
+        <item>💗</item>
+        <item>💓</item>
+        <item>💞</item>
+        <item>💕</item>
+        <item>❣</item>
+        <item>❤</item>
+        <item>💚</item>
+        <item>💙</item>
+        <item>💜</item>
+
+    </string-array>
+
+    <string-array name="greetings">
+
+        <item>Hi</item>
+        <item>Hello</item>
+        <item>How are you?</item>
+        <item>Welcome back</item>
+        <item>Thanks for having me</item>
+        <item>Welcome</item>
+        <item>Greetings!</item>
+        <item>Have a great day!</item>
+        <item>Hey!</item>
+        <item>Hi there!</item>
+        <item>Hey there!</item>
+        <item>Hey dude!</item>
+        <item>Yo!</item>
+        <item>Howdy!</item>
+        <item>How are things?</item>
+        <item>How’s it going?</item>
+        <item>How’s everyone?</item>
+        <item>What’s up?</item>
+        <item>Whazzup?</item>
+        <item>What’s new?</item>
+        <item>Doing OK?</item>
+        <item>It’s nice to see you again!</item>
+        <item>Good to see you!</item>
+        <item>Pleased to meet you.</item>
+        <item>Nice to meet you.</item>
+        <item>It’s been a while!</item>
+        <item>How are you holding up?</item>
+        <item>Everything OK?</item>
+        <item>G’day!</item>
+        <item>Hey, What’s up?</item>
+        <item>What’s the good word?</item>
+        <item>Nice to see you again.</item>
+        <item>Greetings and salutations!</item>
+        <item>How are you doing today?</item>
+        <item>How are you feeling today?</item>
+
+    </string-array>
+
+</resources>
