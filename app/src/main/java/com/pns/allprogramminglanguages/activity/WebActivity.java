@@ -42,6 +42,7 @@ public class WebActivity extends AppCompatActivity {
     private ImageView refresh;
     private InterstitialAd mInterstitialAd;
     private int i;
+    private Toast toast;
 
     @SuppressLint("SetJavaScriptEnabled")
     @Override
@@ -65,7 +66,7 @@ public class WebActivity extends AppCompatActivity {
 
         String titleText = getIntent().getStringExtra("title");
 
-        if(titleText != null ) {
+        if (titleText != null) {
 
             if (titleText.equals("Checkout another tutorials")) {
 
@@ -94,16 +95,23 @@ public class WebActivity extends AppCompatActivity {
 
             if (isNotNetworkAvailable()) {
 
-                if (getApplicationContext() != null)
-                    Toast.makeText(WebActivity.this, "No Internet Connection ", Toast.LENGTH_LONG).show();
+                if (toast != null) {
+                    toast.cancel();
 
-            } else {
+                } else {
 
-                refresh.setVisibility(View.GONE);
-                roundProgressBar.setVisibility(View.VISIBLE);
-                webView.reload();
-                i = 0;
+                    toast = Toast.makeText(this, "No Internet Connection", Toast.LENGTH_SHORT);
+                    toast.show();
+                    new Handler().postDelayed(() -> toast = null, 1000);
+                }
+
+                return;
             }
+
+            refresh.setVisibility(View.GONE);
+            roundProgressBar.setVisibility(View.VISIBLE);
+            webView.reload();
+            i = 0;
 
             new Handler().postDelayed(() -> {
 
@@ -113,7 +121,6 @@ public class WebActivity extends AppCompatActivity {
         });
 
         left.setOnClickListener(v -> {
-
             if (webView.canGoBack()) {
                 webView.goBack();
             }
@@ -122,7 +129,6 @@ public class WebActivity extends AppCompatActivity {
         back.setOnClickListener(v -> onBackPressed());
 
         right.setOnClickListener(v -> {
-
             if (webView.canGoForward()) {
                 webView.goForward();
             }
@@ -131,8 +137,8 @@ public class WebActivity extends AppCompatActivity {
         MobileAds.initialize(this, initializationStatus -> {
         });
 
-        int n = new Random().nextInt(50);
-        if (n == 24) {
+        int n = new Random().nextInt(20);
+        if (n == 5) {
             showAd();
         }
     }

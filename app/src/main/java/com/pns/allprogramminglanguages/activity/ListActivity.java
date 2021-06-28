@@ -1,6 +1,7 @@
 package com.pns.allprogramminglanguages.activity;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,6 +22,7 @@ public class ListActivity extends AppCompatActivity {
 
     private TextView emojiText;
     private ExpandableListView expandableListView;
+    private Toast toast;
     private ArrayList<String> categoryList;
     private Map<String, ArrayList<String>> listItem;
     private int randomNum1 = 0;
@@ -59,9 +61,16 @@ public class ListActivity extends AppCompatActivity {
 
         emojiText.setOnClickListener(v -> {
 
-            Toast.makeText(ListActivity.this, greetings[randomNum2] + " " + emojiList[randomNum1], Toast.LENGTH_LONG).show();
-            showEmoji();
+            if (toast != null) {
+                toast.cancel();
 
+            } else {
+
+                toast = Toast.makeText(this, greetings[randomNum2] + " " + emojiList[randomNum1], Toast.LENGTH_SHORT);
+                toast.show();
+                showEmoji();
+                new Handler().postDelayed(() -> toast = null, 1000);
+            }
         });
     }
 
@@ -1819,6 +1828,7 @@ public class ListActivity extends AppCompatActivity {
             arrayList32.add("Chat app || Java");
             arrayList32.add("Whatsapp clone app || Java");
             arrayList32.add("Music player app || Java");
+            arrayList32.add("Quiz App || Kotlin");
 
             //-----------------------------------------------------------------------
 
